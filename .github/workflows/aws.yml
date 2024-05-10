@@ -1,7 +1,11 @@
 name: Entrega continua
 
 on:
-  workflow_call:
+   push:
+    branches:
+      - main
+    tags:
+      - "*"
 
 jobs:
 

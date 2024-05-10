@@ -84,16 +84,6 @@ jobs:
     #if: github.ref == 'refs/heads/main'
     
     steps:
-
-      - name: Download JAR
-        #Download the artifact which was uploaded in the build's job
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact
-          path: target/
-        #Deploy the artifact (JAR) into AWS Beanstalk
-      - name: Display structure of downloaded files
-        run: ls -R
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
         with:

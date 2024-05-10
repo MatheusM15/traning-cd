@@ -89,11 +89,11 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-         # aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
           wait_for_environment_recovery: 90
           use_existing_version_if_available: true
-          application_name: DevopsFiap-0n
-          environment_name: DevopsFiap-0n-env-1
+          application_name: teachchandaller
+          environment_name: Teachchandaller-dev
           version_label: ${{github.SHA}}
           region: us-east-1
           deployment_package: ./target/demo-0.0.2.7-SNAPSHOT.jar        
